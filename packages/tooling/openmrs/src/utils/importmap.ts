@@ -172,9 +172,9 @@ export async function runProject(
 }> {
   const baseDir = process.cwd();
   const sourceDirectories = await matchAny(baseDir, sourceDirectoryPatterns);
-  const importMap = {};
-  const routes = {};
-  const watchedRoutesPaths = {};
+  const importMap: Record<string, string> = {};
+  const routes: Record<string, unknown> = {};
+  const watchedRoutesPaths: Record<string, string> = {};
 
   logInfo('Loading dynamic import map and routes ...');
 
